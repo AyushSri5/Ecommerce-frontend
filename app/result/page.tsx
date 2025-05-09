@@ -96,7 +96,7 @@ export default function StudentResultsPage() {
                     <TableCell>
                       <Badge
                         variant={
-                          grade === 'A+' ? 'success' : grade === 'A' ? 'default' : grade === 'B' ? 'secondary' : 'destructive'
+                          grade === 'A+' ? 'outline' : grade === 'A' ? 'default' : grade === 'B' ? 'secondary' : 'destructive'
                         }
                       >
                         {grade}
