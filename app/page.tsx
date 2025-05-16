@@ -15,14 +15,14 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     const res = await fetch('https://ecommerce-backend-rxue.onrender.com/products', {
       method: 'POST',
@@ -76,7 +76,7 @@ export default function Home() {
           value={formData.description}
           onChange={handleChange}
           className="w-full p-2 border rounded"
-          rows="3"
+          rows={3}
         ></textarea>
 
         <input

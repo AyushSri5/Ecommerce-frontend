@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<{ id: string; name: string; description: string; price: number; image_url?: string }[]>([]);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
